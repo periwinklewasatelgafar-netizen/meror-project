@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0b0c10;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1{
+    color: #66fcf1;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+p{
+    color: #c5c6c7;
+    font-size: 18px;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.moire-container{
+    position: relative;
+    width: 80vh;
+    height: 80vh;
+    max-width: 450px;
+    max-height: 450px;
+    background-color: #1f2833;
+    border: 3px solid #45a29e;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.layer{
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    
+   background-image: repeating-conic-gradient(#45a29e 0deg 10deg, #1f2833 10deg 20deg);
+    background-size: cover;
+    animation: rotateLayer 2s linear infinite;
+}
+
+.layer-1 {
+    transform: rotate(0deg);
+}
+
+.layer-2 {
+    transform: rotate(4deg);
+}
+.moire-container:hover .layer-1 {
+    animation: rotateLayer1 1.5s linear infinite;
+}
